@@ -1,0 +1,9 @@
+{
+  "firebase": "ANGULAR2-TODOS",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
