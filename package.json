@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve.dev",
-    "build": "gulp build.prod"
+    "build": "gulp build.prod",
+    "build:prod": "gulp builder"
   },
   "author": "Jay Kan",
   "license": "MIT",
@@ -19,7 +20,10 @@
     "@angular/http": "2.0.0-rc.2",
     "@angular/platform-browser": "2.0.0-rc.2",
     "@angular/platform-browser-dynamic": "2.0.0-rc.2",
+    "@angular/router": "2.0.0-rc.2",
+
     "systemjs": "0.19.27",
+    "systemjs-builder": "^0.15.17",
     "es6-module-loader": "^0.17.11",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",

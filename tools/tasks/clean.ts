@@ -32,7 +32,7 @@ function cleanDev(done) {
 }
 
 function cleanProd(done) {
-  del([PROD_DEST, TMP_DEST]).then(paths => {
+  del('public').then(paths => {
     util.log('Deleted', chalk.yellow(paths && paths.join(', ') || '-'));
     done();
   });

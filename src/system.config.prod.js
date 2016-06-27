@@ -3,18 +3,42 @@
 
   // map tells the System loader where to look for things
   var map = {
-    "rxjs":                               "lib/rxjs",
-    "@angular":                           "lib/@angular",
-    "@angular/core":                      "lib/@angular/core/bundles/core.umd.min.js",
-    "@angular/common":                    "lib/@angular/common/bundles/common.umd.min.js",
-    "@angular/compiler":                  "lib/@angular/compiler/bundles/compiler.umd.min.js",
-    "@angular/platform-browser":          "lib/@angular/platform-browser/bundles/platform-browser.umd.min.js",
-    "@angular/platform-browser-dynamic":  "lib/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.min.js"
+    'app':                                'dist/dev/app',
+    'rxjs':                               'node_modules/rxjs',
+    '@angular':                           'node_modules/@angular'
   };
 
+  // packages tells the System loader how to load when no filename and/or no extension
+  var packages = {
+    'app':                        { main: 'bootstrap.js', defaultExtension: 'js'  },
+    'rxjs':                       { defaultExtension: 'js'                        }
+  };
+
+  var ngPackageNames = [
+    'common',
+    'compiler',
+    'core',
+    'http',
+    'platform-browser',
+    'platform-browser-dynamic',
+    'router'
+  ];
+  // Individual files (~300 requests):
+  function packIndex(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  }
+  // Bundled (~40 requests):
+  function packUmd(pkgName) {
+    packages['@angular/'+pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+  }
+  // Most environments should use UMD; some (Karma) need the individual index files
+  var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+  // Add package entries for angular packages
+  ngPackageNames.forEach(setPackageConfig);
+
   var config = {
-    defaultJSExtensions: true,
-    map: map
+    map: map,
+    packages: packages
   };
 
   System.config(config);

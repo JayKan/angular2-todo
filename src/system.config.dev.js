@@ -1,20 +1,34 @@
 ;(function() {
   'use strict';
-
   // map tells the System loader where to look for things
   var map = {
-    "rxjs":                               "node_modules/rxjs",
-    "@angular":                           "node_modules/@angular",
-    "@angular/core":                      "node_modules/@angular/core/index.js",
-    "@angular/common":                    "node_modules/@angular/common/index.js",
-    "@angular/compiler":                  "node_modules/@angular/compiler/index.js",
-    "@angular/platform-browser":          "node_modules/@angular/platform-browser/index.js",
-    "@angular/platform-browser-dynamic":  "node_modules/@angular/platform-browser-dynamic/index.js"
+    'app':      'dist/dev/app',
+    'rxjs':     'node_modules/rxjs',
+    '@angular': 'node_modules/@angular'
   };
-  
+  // packages tells the System loader how to load when no filename and/or no extension
+  var packages = {
+    'app':   { main: 'bootstrap.js', defaultExtension: 'js'  },
+    'rxjs':  { defaultExtension: 'js'                        }
+  };
+
+  var ngPackageNames = [
+    'common',
+    'compiler',
+    'core',
+    'http',
+    'platform-browser',
+    'platform-browser-dynamic',
+    'router'
+  ];
+  // Add package entries
+  ngPackageNames.forEach(function(pkgName) {
+    packages['@angular/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  });
+
   var config = {
-    defaultJSExtensions: true,
-    map: map
+    map: map,
+    packages: packages
   };
 
   System.config(config);
