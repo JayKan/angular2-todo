@@ -10,7 +10,8 @@
   "author": "Jay Kan",
   "license": "MIT",
   "engines": {
-    "node": ">= 4.2.1 < 5"
+    "node": "5.x",
+    "npm": "3.x"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
@@ -22,16 +23,10 @@
     "@angular/router": "2.0.0-rc.2",
 
     "systemjs": "0.19.27",
-    "systemjs-builder": "^0.15.17",
-    "es6-module-loader": "^0.17.11",
-    "es6-promise": "^3.1.2",
-    "es6-shim": "^0.35.0",
-    "gulp-typescript": "2.9.2",
+    "core-js": "^2.4.0",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "^0.6.10",
-    "todomvc-app-css": "^2.0.0",
-    "todomvc-common": "^1.0.1"
+    "zone.js": "^0.6.10"
   },
   "devDependencies": {
     "async": "^1.4.2",
@@ -78,6 +73,9 @@
     "typings": "^0.6.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "yargs": "^3.32.0"
+    "yargs": "^3.32.0",
+    "gulp-typescript": "2.9.2",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1"
   }
 }

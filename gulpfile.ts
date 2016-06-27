@@ -14,7 +14,8 @@ gulp.task('build.dev', done => {
               'build.assets.dev',
               'build.js.dev',
               'build.index.dev',
-              done);
+              done
+  );
 });
 
 // -----------
@@ -23,10 +24,12 @@ gulp.task('serve.dev', done => {
   runSequence('build.dev',
               'server.start',
               'watch.serve',
-              done);
+              done
+  );
 });
 
-
+// -----------
+// Build prod
 gulp.task('builder.prod', done => {
   runSequence('clean.prod',     
               'build.assets.prod',
@@ -34,7 +37,7 @@ gulp.task('builder.prod', done => {
               'bundle.builder',
               'build.index.prod',
               done
-  )
+  );
 });
 
 

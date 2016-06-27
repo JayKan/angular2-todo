@@ -78,8 +78,8 @@
     "tarball": "https://registry.npmjs.org/zone.js/-/zone.js-0.6.12.tgz"
   },
   "files": [
-    "lib",
-    "dist"
+    "dist",
+    "lib"
   ],
   "gitHead": "5f366a1ca0ee00046375a25af25105fb5e66da24",
   "homepage": "https://github.com/angular/zone.js#readme",
@@ -87,12 +87,12 @@
   "main": "dist/zone-node.js",
   "maintainers": [
     {
-      "email": "angular-core+npm@google.com",
-      "name": "angularcore"
+      "name": "angularcore",
+      "email": "angular-core+npm@google.com"
     },
     {
-      "email": "briantford@gmail.com",
-      "name": "btford"
+      "name": "btford",
+      "email": "briantford@gmail.com"
     }
   ],
   "name": "zone.js",

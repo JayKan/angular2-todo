@@ -55,8 +55,8 @@
   "homepage": "http://rbuckton.github.io/ReflectDecorators",
   "keywords": [
     "decorator",
-    "metadata",
     "javascript",
+    "metadata",
     "reflect"
   ],
   "license": "Apache-2.0",
@@ -69,8 +69,8 @@
   "main": "Reflect.js",
   "maintainers": [
     {
-      "email": "rbuckton@chronicles.org",
-      "name": "rbuckton"
+      "name": "rbuckton",
+      "email": "rbuckton@chronicles.org"
     }
   ],
   "name": "reflect-metadata",

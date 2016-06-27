@@ -4,6 +4,7 @@
   "ignore": [
     "firebase.json",
     "**/.*",
+    "**/*.d.ts",
     "**/node_modules/**",
     "typings",
     "tools",
