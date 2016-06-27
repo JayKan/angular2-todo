@@ -13,7 +13,6 @@ export = function bundleBuilder() {
         });
       })
       .then(function() {
-        console.log('Successfully bundled all scripts!');
         done();
       }); 
   }

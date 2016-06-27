@@ -37,7 +37,7 @@ gulp.task('build.prod', done => {
               done);
 });
 
-gulp.task('builder', done => {
+gulp.task('builder.prod', done => {
   runSequence('clean.prod',     
               'build.assets.prod',
               'copy.partialVendor.lib',

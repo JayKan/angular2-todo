@@ -73,7 +73,8 @@ function normalizeDependencies(deps: InjectableDependency[]) {
       .forEach((d:InjectableDependency) => d.src = require.resolve(d.src));
   return deps;
 }
-function getEnvironment() {
+
+function getEnvironment(): string {
   let base: string[] = argv['_'];
   let prodKeyword = !!base.filter(o => o.indexOf(ENVIRONMENTS.PRODUCTION) >= 0).pop();
   if (base && prodKeyword || argv['env'] === ENVIRONMENTS.PRODUCTION) {
