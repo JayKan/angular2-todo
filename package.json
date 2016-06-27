@@ -5,8 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve.dev",
-    "build": "gulp build.prod",
-    "build:prod": "gulp builder.prod"
+    "build": "gulp builder.prod"
   },
   "author": "Jay Kan",
   "license": "MIT",

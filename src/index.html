@@ -42,13 +42,14 @@
 
 <!-- libs:js -->
 <!-- endinject -->
+
 <% if (ENV === 'prod') { %>
- <script src="bundle.min.js"></script>
+<script src="bundle.min.js"></script>
 <% } %>
 
 <% if (ENV === 'dev') { %>
- <script type="text/javascript" src="system.config.js"></script>
- <script type="text/javascript">System.import('app').then(null, console.error.bind(console));</script>
+<script type="text/javascript" src="system.config.js"></script>
+<script type="text/javascript">System.import('app').then(null, console.error.bind(console));</script>
 <% } %>
 </body>
 </html>

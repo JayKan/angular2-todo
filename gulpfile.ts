@@ -26,16 +26,6 @@ gulp.task('serve.dev', done => {
               done);
 });
 
-//--------------------
-// Build firebase prod
-gulp.task('build.prod', done => {
-  runSequence('clean',
-              'build.assets.prod',
-              'build.js.prod',
-              'copy.vendor.lib',
-              'build.index.prod',
-              done);
-});
 
 gulp.task('builder.prod', done => {
   runSequence('clean.prod',     
