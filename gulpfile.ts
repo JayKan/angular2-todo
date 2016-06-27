@@ -37,5 +37,15 @@ gulp.task('build.prod', done => {
               done);
 });
 
+gulp.task('builder', done => {
+  runSequence('clean.prod',     
+              'build.assets.prod',
+              'copy.partialVendor.lib',
+              'bundle.builder',
+              'build.index.prod',
+              done
+  )
+});
+
 
 
