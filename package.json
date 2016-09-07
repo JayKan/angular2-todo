@@ -1,7 +1,7 @@
 {
-  "name": "angular2-form",
-  "version": "0.0.0",
-  "description": "Angular2 form examples",
+  "name": "angular2-todo",
+  "version": "1.0.0",
+  "description": "Angular2 todo example using SystemJS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve.dev",
