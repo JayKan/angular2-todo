@@ -1,12 +1,17 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { TodoApp } from './components/todo/todo';
-import { TodoStore } from './components/todo/todo.service';
+
+import { AppModule } from './app.module';
 
 // enable prod for faster renders
 enableProdMode();
 
-bootstrap(TodoApp, [TodoStore])
-  .then(success => console.log('Bootstrap success'))
-  .catch(error => console.error(error))
-;
+export function main() {
+  return platformBrowserDynamic().bootstrapModule(AppModule);
+}
+
+if (document.readyState === 'complete') {
+  main();
+} else {
+  document.addEventListener('DOMContentLoaded', main);
+}

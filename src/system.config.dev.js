@@ -19,7 +19,8 @@
     'http',
     'platform-browser',
     'platform-browser-dynamic',
-    'router'
+    'router',
+    'forms'
   ];
   // Add package entries
   ngPackageNames.forEach(function(pkgName) {

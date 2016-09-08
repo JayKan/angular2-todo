@@ -78,3 +78,7 @@ export class TodoStore {
     this.updateStore();
   }
 }
+
+export const TODO_PROVIDER: any[] = [
+  TodoStore
+];
